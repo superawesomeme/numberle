@@ -5,12 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Numerle</title>
     
-    <script src="script.js"></script>
+    <!-- Google Fonts: Outfit (Geometric sans-serif similar to Google Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS for rapid UI styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Inter font for clean, modern typography -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        glass: {
+                            100: 'rgba(255, 255, 255, 0.1)',
+                            200: 'rgba(255, 255, 255, 0.2)',
+                            300: 'rgba(255, 255, 255, 0.3)',
+                            border: 'rgba(255, 255, 255, 0.15)',
+                        },
+                        game: {
+                            correct: '#10b981', // Emerald 500
+                            wrongLocation: '#f59e0b', // Amber 500
+                            wrong: '#374151', // Gray 700
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -146,5 +173,7 @@
         </aside>
 
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
