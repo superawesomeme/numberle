@@ -3,7 +3,7 @@ window.tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
+                        sans: ['Helvetica', 'sans-serif'],
                     },
                     colors: {
                         glass: {
