@@ -73,7 +73,7 @@ body {
         .tile[data-state="wrong-location"] {
             border-color: transparent;
             background: rgba(255, 180, 0, 1); /* Amber */
-            box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+            box-shadow: 0 0 15px rgba(255, 180, 0, 0.4);
         }
 
         .tile[data-state="correct"] {
