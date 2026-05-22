@@ -1,29 +1,3 @@
-window.tailwind = window.tailwind || {};
-window.tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Helvetica', 'sans-serif'],
-                    },
-                    colors: {
-                        glass: {
-                            100: 'rgba(255, 255, 255, 0.1)',
-                            200: 'rgba(255, 255, 255, 0.2)',
-                            300: 'rgba(255, 255, 255, 0.3)',
-                            border: 'rgba(255, 255, 255, 0.15)',
-                        },
-                        game: {
-                            correct: '#10b981', // Emerald 500
-                            wrongLocation: '#f59e0b', // Amber 500
-                            wrong: '#374151', // Gray 700
-                        }
-                    }
-                }
-            }
-        }
-
-// --- Run game code after the page has loaded ---
-document.addEventListener("DOMContentLoaded", () => {
 // --- Game Setup & State ---
         // Generate random 5 digit number between 10000 and 99999
         let targetWord = Math.floor(Math.random() * (99999 - 10000) + 10000).toString();
@@ -43,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startInteraction();
 
         // --- Instructions Modal Toggle (Mobile) ---
-        window.toggleInstructions = function toggleInstructions() {
+        function toggleInstructions() {
             if (instructionsPanel.classList.contains('hidden')) {
                 instructionsPanel.classList.remove('hidden');
                 instructionsPanel.classList.add('fixed', 'inset-0', 'z-50', 'm-4', 'overflow-y-auto');
@@ -297,4 +271,3 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, (index * DANCE_ANIMATION_DURATION) / 5);
             });
         }
-});
